@@ -13,16 +13,18 @@ public class WorkoutSet {
     long id;
     String name;
     String date;
+    String time;
     int weight;
     int reps;
     String stage;
 
     public WorkoutSet(){}
 
-    public WorkoutSet(long id, String name, String date, int weight, int reps, String stage) {
+    public WorkoutSet(long id, String name, String date, String time, int weight, int reps, String stage) {
         this.id = id;
         this.name = name;
         this.date = date;
+        this.time = time;
         this.weight = weight;
         this.reps = reps;
         this.stage = stage;
@@ -52,6 +54,14 @@ public class WorkoutSet {
         this.date = date;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     public int getWeight() {
         return weight;
     }
@@ -76,12 +86,14 @@ public class WorkoutSet {
         this.stage = stage;
     }
 
+
     @Override
     public String toString() {
         return "WorkoutSet{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
                 ", weight=" + weight +
                 ", reps=" + reps +
                 ", stage='" + stage + '\'' +
