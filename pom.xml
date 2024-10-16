@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.fluffy</groupId>
-	<artifactId>weightlifter</artifactId>
+	<artifactId>weightlifter-api</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<name>weightlifter</name>
 	<description>Demo project for Spring Boot</description>

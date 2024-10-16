@@ -15,24 +15,24 @@ public class Controller {
     public SetService service;
 
 
-    @GetMapping("/allset")
+    @GetMapping("/workout/sets")
     public List<WorkoutSet> getAllSet(){
         System.out.println("calling all set");
         return service.getAllSet();
     }
 
-    @GetMapping("/allset/{name}")
+    @GetMapping("/workout/sets/{name}")
     public List<WorkoutSet> getAllSetByName(@PathVariable String name){
         return service.getSetByName(name);
     }
 
-    @PostMapping("/addset")
+    @PostMapping("/workout/sets")
     public String addSet(@RequestBody WorkoutSet set){
         service.createSet(set);
         return "Success";
     }
 
-    @DeleteMapping("/set/{id}")
+    @DeleteMapping("/workout/sets/{id}")
     public String deleteSet(@PathVariable long id){
         service.deleteSetById(id);
         return "It has been deleted";
