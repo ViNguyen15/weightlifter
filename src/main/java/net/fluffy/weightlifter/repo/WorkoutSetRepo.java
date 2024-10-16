@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface WorkoutSetRepo extends JpaRepository<WorkoutSet, Long>{
 
-    @Query(nativeQuery = true, value = "SELECT * FROM workoutset WHERE name LIKE ?1%")
+    @Query(nativeQuery = true, value = "SELECT * FROM workout_set WHERE name LIKE ?1%;")
     List<WorkoutSet> getWorkoutSetsByName(String name);
 }
