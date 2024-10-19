@@ -17,10 +17,11 @@ public class WorkoutSet {
     int weight;
     int reps;
     String stage;
+    String max;
 
     public WorkoutSet(){}
 
-    public WorkoutSet(long id, String name, String date, String time, int weight, int reps, String stage) {
+    public WorkoutSet(long id, String name, String date, String time, int weight, int reps, String stage, String max) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -28,6 +29,7 @@ public class WorkoutSet {
         this.weight = weight;
         this.reps = reps;
         this.stage = stage;
+        this.max = max;
     }
 
     public long getId() {
@@ -86,6 +88,20 @@ public class WorkoutSet {
         this.stage = stage;
     }
 
+    public String getMax() {
+        return max;
+    }
+
+    public void setMax(String max) {
+        this.max = max;
+    }
+
+    public String oneRepMax(){
+//        int oneRep = (int)(weight * (1 + ((double)reps/30)));
+        int oneRep = (int)(( weight * reps * 0.0333 ) + weight);
+        return ""+oneRep;
+    }
+
 
     @Override
     public String toString() {
@@ -97,6 +113,7 @@ public class WorkoutSet {
                 ", weight=" + weight +
                 ", reps=" + reps +
                 ", stage='" + stage + '\'' +
+                ", max='" + max + '\'' +
                 '}';
     }
 }

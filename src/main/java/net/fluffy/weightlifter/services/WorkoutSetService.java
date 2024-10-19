@@ -16,6 +16,7 @@ public class WorkoutSetService implements SetService{
 
     @Override
     public WorkoutSet createSet(WorkoutSet set) {
+        set.setMax(set.oneRepMax());
         return setService.save(set);
     }
 
