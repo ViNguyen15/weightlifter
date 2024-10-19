@@ -28,12 +28,16 @@ echo "JAR file created successfully."
 
 # Step 4: Build the Docker image
 echo "Building the Docker image..."
-docker build -t weightlifter .
+docker build -t weightlifter-api:latest .
 
 # Check if the Docker image build was successful
 if [ $? -ne 0 ]; then
   echo "Failed to build the Docker image."
   exit 1
 fi
+
+docker tag  weightlifter-api:latest vinguyen15/weightlifter-api:version1.0
+
+docker push vinguyen15/weightlifter-api:version1.0
 
 echo "Docker image built successfully."

@@ -5,7 +5,7 @@ FROM openjdk:23-bookworm
 WORKDIR /app
 
 # Copy the built jar file into the container
-COPY target/weightlifter-0.1.0-SNAPSHOT.jar app.jar
+COPY target/weightlifter-api-0.1.0-SNAPSHOT.jar app.jar
 
 # Expose the port your Spring Boot application runs on
 EXPOSE 8080
